@@ -33,6 +33,12 @@ public class AlunoController {
         return service.getAllAvaliacaoFisicaId(id);
 
     }
+    @GetMapping
+    public List<Aluno> gettAll(@RequestParam(value="dataDeNascimento", required = false)
+                               String dataDeNascimento){
+        return service.getAll();
+
+    }
 
 
 }
