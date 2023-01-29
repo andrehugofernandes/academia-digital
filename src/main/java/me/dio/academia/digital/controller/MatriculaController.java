@@ -21,7 +21,8 @@ public class MatriculaController {
         return service.create(form);
     }
     @GetMapping
-    public List<Matricula> getAll(){
-        return service.getAll();
+    public List<Matricula> getAll(@RequestParam(value = "bairo", required = false)String bairro){
+
+        return service.getAll(bairro);
     }
 }
